@@ -1,0 +1,114 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h1 {
+    text-align: left;
+    color: gainsboro;
+    font-weight: 300;
+    font-size: 34px;
+    span {
+      font-size: 25px;
+    }
+  }
+  input {
+    padding: 0 20px 0 25px;
+    color: gainsboro;
+    background-color: transparent;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    width: 260px;
+    height: 45px;
+    border: 1.5px solid gainsboro;
+    border-radius: 8px;
+  }
+  .calendar-wrapper {
+    position: relative;
+    padding: 0 20px 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: default;
+    width: 260px;
+    height: 45px;
+    border: 1.5px solid gainsboro;
+    border-radius: 8px;
+
+    .react-calendar {
+      position: absolute;
+      top: 45px;
+      left: 0;
+      background-color: gray;
+      &__navigation {
+        button {
+          min-width: 36px;
+          &:active {
+            background: darkgray !important;
+          }
+        }
+        &__arrow {
+          color: gainsboro;
+          width: 32px;
+          &:hover {
+            background-color: darkgray !important;
+          }
+        }
+        &__label {
+          &:hover {
+            background-color: darkgray !important;
+          }
+          &__labelText {
+            font-size: 16px;
+            text-align: center;
+          }
+        }
+      }
+      &__tile {
+        color: white !important;
+        &--now {
+          background-color: gray;
+          border: 1px dashed darkgray;
+        }
+        &--active {
+          background: darkgray !important;
+        }
+        &:hover {
+          background-color: darkgray;
+        }
+      }
+      &__month-view {
+        &__days {
+          &__day {
+            font-weight: 100;
+            &--neighboringMonth {
+              color: #b4b4b4 !important;
+            }
+          }
+        }
+        &__weekdays {
+          &__weekday {
+            color: gainsboro;
+            font-weight: 500;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+
+
+    img {
+      height: 25px;
+      cursor: pointer;
+    }
+    span {
+      margin-top: 2px;
+      font-weight: 300;
+      font-size: 1.35rem;
+      color: gainsboro;
+      cursor: pointer;
+    }
+  }
+
+}

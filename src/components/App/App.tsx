@@ -1,24 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 
+import Header from "../Header/Header";
+import Exchange from "../Exchange/Exchange";
+
 function App() {
-  return (
+
+    const [date, dateState] = useState(new Date());
+
+    return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <div className="container">
+            <Header onDate={dateState}/>
+            <Exchange date={date}/>
+        </div>
     </div>
-  );
+    );
 }
 
 export default App;
